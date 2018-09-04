@@ -15,6 +15,7 @@ System.out.println("Job ID: " + id);
 out.println("Jobは ID=<b>" + id + "</b> として実行されました。");
 %>
 
-
+    <a href="./index.html">最初に戻る</a>
+    
 </body>
 </html>
