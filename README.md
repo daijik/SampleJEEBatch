@@ -1,22 +1,18 @@
 OpenShift上のJBoss EAP 7.1 にて、JavaEEのバッチプログラム（ただし、中身は空っぽ）を動かしてみる
 ====
 
-Overview
-
 ## 概要
 OpenShiftに最初から登録されているデモ（kitchensink）は色々と複雑なので、とにかく、とことんシンプルにしたものを作成した。
 
 基本的にMaven初心者が勉強しつつ作ったので、Mavenのお作法的に間違っているところがあるかもしれない（けど、普通に動いている）。
 
+## 必要なもの
+OpenShift  頑張って立ててください。
 
-## Demo
+## 使い方
+Red Hat OpenShift では、JBoss EAPのテンプレートが最初から用意されているので、そこからウィザードでチャチャっとデプロイできるはず、です。
 
-## VS. 
+WARファイルが作りたい場合は、このリポジトリをgit clone して、「mvn clean install」してやることで、targetディレクトリの下にSampleJEEBatch.warというファイルが出来ます。
 
-## Requirement
-
-## Usage
-
-## Install
-
-## Contribution
+## 注意事項
+OCP3.9の不具合なのかどうかわかりませんが、EAP7.1(no https)のテンプレートからデプロイしようとすると、"7.0.0 GA"のタグと"kitchensink"ディレクトリの設定が残ってしまうため、一度、ビルドに失敗します。build configを編集して（不要なものを消す）やることで、解決できます。
